@@ -58,7 +58,7 @@ public class student {
         return emailId;
     }
 
-    public void setId(String emailId) {
+    public void setEmailId(String emailId) {
         this.emailId = emailId;
     }
 }

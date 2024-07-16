@@ -16,7 +16,9 @@ public class WebConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 Dotenv dotenv = Dotenv.load();
                 String frontendURL = dotenv.get("frontend_url");
-                registry.addMapping("/api/v1/**").allowedOrigins(frontendURL);
+                registry.addMapping("/api/v1/**").allowedOrigins(frontendURL)
+                        .allowedMethods("GET", "POST", "PUT", "DELETE");
+                ;
             }
         };
     }
