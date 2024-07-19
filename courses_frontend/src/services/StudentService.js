@@ -2,8 +2,10 @@ import axios from "axios";
 
 const STUDENT_API_BASE_URL = process.env.REACT_APP_STUDENT_API_URL
 
+
 class StudentService{
     getStudents(){
+        console.log(STUDENT_API_BASE_URL);
         return axios.get(STUDENT_API_BASE_URL);
     }
 
